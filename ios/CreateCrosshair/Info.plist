@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Create Crosshair</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSLibraryUsageDescription</key>
+	<string>Crosshair Creator needs access to your photo library to analyze and clean duplicate photos, large videos, and old screenshots.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Crosshair Creator needs access to your photos to detect duplicates and optimize storage space.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Crosshair Creator needs permission to access your photos for storage optimization.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Crosshair Creator needs access to your contacts to detect and merge duplicate entries.</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Crosshair Creator tracking to deliver personalized ads and improve your app experience. Your data helps us to provide relevant content and enhance overall app quality.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UILaunchStoryboardName</key>
+	<string></string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Crosshair Creator needs camera access to take photos for analysis and storage optimization.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Crosshair Creator needs microphone access for voice commands and audio analysis.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Crosshair Creator needs speech recognition to process voice commands for storage management.</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Inter-Black.ttf</string>
+		<string>Inter-Bold.ttf</string>
+		<string>Inter-ExtraBold.ttf</string>
+		<string>Inter-ExtraLight.ttf</string>
+		<string>Inter-Light.ttf</string>
+		<string>Inter-Medium.ttf</string>
+		<string>Inter-Regular.ttf</string>
+		<string>Inter-SemiBold.ttf</string>
+		<string>Inter-Thin.ttf</string>
+		<string>Sora-Bold.ttf</string>
+		<string>Sora-ExtraBold.ttf</string>
+		<string>Sora-ExtraLight.ttf</string>
+		<string>Sora-Light.ttf</string>
+		<string>Sora-Medium.ttf</string>
+		<string>Sora-Regular.ttf</string>
+		<string>Sora-SemiBold.ttf</string>
+		<string>Sora-Thin.ttf</string>
+		<string>Poppins-Black.ttf</string>
+		<string>Poppins-Bold.ttf</string>
+		<string>Poppins-ExtraBold.ttf</string>
+		<string>Poppins-ExtraBoldItalic.ttf</string>
+		<string>Poppins-ExtraLight.ttf</string>
+		<string>Poppins-ExtraLightItalic.ttf</string>
+		<string>Poppins-Light.ttf</string>
+		<string>Poppins-Medium.ttf</string>
+		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-SemiBold.ttf</string>
+		<string>Poppins-Thin.ttf</string>
+		<string>SourceCodePro-Black.ttf</string>
+		<string>SourceCodePro-Bold.ttf</string>
+		<string>SourceCodePro-ExtraBold.ttf</string>
+		<string>SourceCodePro-ExtraLight.ttf</string>
+		<string>SourceCodePro-Light.ttf</string>
+		<string>SourceCodePro-Medium.ttf</string>
+		<string>SourceCodePro-Regular.ttf</string>
+		<string>SourceCodePro-SemiBold.ttf</string>
+		<string>SfProDisplay-Black.ttf</string>
+		<string>SfProDisplay-Bold.ttf</string>
+		<string>SfProDisplay-Light.ttf</string>
+		<string>SfProDisplay-Medium.ttf</string>
+		<string>SfProDisplay-Regular.ttf</string>
+		<string>SfProDisplay-SemiBold.ttf</string>
+		<string>RedHatDisplay-Black.ttf</string>
+		<string>RedHatDisplay-Bold.ttf</string>
+		<string>RedHatDisplay-ExtraBold.ttf</string>
+		<string>RedHatDisplay-Light.ttf</string>
+		<string>RedHatDisplay-Medium.ttf</string>
+		<string>RedHatDisplay-Regular.ttf</string>
+		<string>RedHatDisplay-SemiBold.ttf</string>
+		<string>ProximaNova-Black.ttf</string>
+		<string>ProximaNova-Bold.ttf</string>
+		<string>ProximaNova-ExtraBold.ttf</string>
+		<string>ProximaNova-Light.ttf</string>
+		<string>ProximaNova-Medium.ttf</string>
+		<string>ProximaNova-Regular.ttf</string>
+		<string>ProximaNova-SemiBold.ttf</string>
+		<string>ProximaNova-Thin.ttf</string>
+	</array>
+</dict>
+</plist>
