@@ -1,13 +1,7 @@
 PODS:
-  - Base64 (1.1.2)
   - boost (1.76.0)
   - BVLinearGradient (2.8.3):
     - React-Core
-  - CodePush (8.3.1):
-    - Base64 (~> 1.1)
-    - JWT (~> 3.0.0-beta.12)
-    - React-Core
-    - SSZipArchive (~> 2.2.2)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.72.9)
   - FBReactNativeSpec (0.72.9):
@@ -25,8 +19,6 @@ PODS:
   - hermes-engine (0.72.9):
     - hermes-engine/Pre-built (= 0.72.9)
   - hermes-engine/Pre-built (0.72.9)
-  - JWT (3.0.0-beta.14):
-    - Base64 (~> 1.1.2)
   - libevent (2.1.12)
   - libwebp (1.5.0):
     - libwebp/demux (= 1.5.0)
@@ -352,39 +344,16 @@ PODS:
   - react-native-blur (4.4.1):
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
-  - react-native-cameraroll (5.10.0):
-    - React-Core
-  - react-native-config (1.5.9):
-    - react-native-config/App (= 1.5.9)
-  - react-native-config/App (1.5.9):
-    - React-Core
   - react-native-contacts (7.0.8):
-    - React-Core
-  - react-native-date-picker (4.4.2):
-    - React-Core
-  - react-native-document-picker (9.3.1):
-    - RCT-Folly (= 2021.07.22.00)
-    - React-Core
-  - react-native-image-picker (7.2.3):
-    - RCT-Folly (= 2021.07.22.00)
-    - React-Core
-  - react-native-linear-gradient-text (1.2.12):
-    - RCT-Folly (= 2021.07.22.00)
     - React-Core
   - react-native-mmkv (2.12.2):
     - MMKV (>= 1.3.3)
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
-  - react-native-notifications (4.3.5):
-    - React-Core
-  - react-native-restart (0.0.27):
-    - React-Core
   - react-native-safe-area-context (4.14.1):
     - React-Core
   - react-native-slider (4.5.7):
     - RCT-Folly (= 2021.07.22.00)
-    - React-Core
-  - react-native-view-shot (3.8.0):
     - React-Core
   - react-native-webview (13.16.0):
     - RCT-Folly (= 2021.07.22.00)
@@ -499,9 +468,9 @@ PODS:
     - React-jsi (= 0.72.9)
     - React-logger (= 0.72.9)
     - React-perflogger (= 0.72.9)
+  - ReactNativeAudioToolkit (2.0.3):
+    - React
   - RevenueCat (5.32.0)
-  - rn-fetch-blob (0.12.0):
-    - React-Core
   - RNAudioRecorderPlayer (3.6.14):
     - React-Core
   - RNCAsyncStorage (1.24.0):
@@ -511,17 +480,12 @@ PODS:
   - RNCMaskedView (0.3.2):
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
-  - RNCPicker (2.11.4):
-    - React-Core
   - RNDeviceInfo (10.14.0):
     - React-Core
   - RNFastImage (8.6.3):
     - React-Core
     - SDWebImage (~> 5.11.1)
     - SDWebImageWebPCoder (~> 0.8.4)
-  - RNFlashList (1.8.3):
-    - RCT-Folly (= 2021.07.22.00)
-    - React-Core
   - RNFS (2.20.0):
     - React-Core
   - RNGestureHandler (2.29.0):
@@ -560,15 +524,11 @@ PODS:
     - libwebp (~> 1.0)
     - SDWebImage/Core (~> 5.10)
   - SocketRocket (0.6.1)
-  - SSZipArchive (2.2.3)
-  - TextToSpeech (4.1.1):
-    - React-Core
   - Yoga (1.14.0)
 
 DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - BVLinearGradient (from `../node_modules/react-native-linear-gradient`)
-  - CodePush (from `../node_modules/react-native-code-push`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
@@ -594,19 +554,10 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - "react-native-blur (from `../node_modules/@react-native-community/blur`)"
-  - "react-native-cameraroll (from `../node_modules/@react-native-camera-roll/camera-roll`)"
-  - react-native-config (from `../node_modules/react-native-config`)
   - react-native-contacts (from `../node_modules/react-native-contacts`)
-  - react-native-date-picker (from `../node_modules/react-native-date-picker`)
-  - react-native-document-picker (from `../node_modules/react-native-document-picker`)
-  - react-native-image-picker (from `../node_modules/react-native-image-picker`)
-  - react-native-linear-gradient-text (from `../node_modules/react-native-linear-gradient-text`)
   - react-native-mmkv (from `../node_modules/react-native-mmkv`)
-  - react-native-notifications (from `../node_modules/react-native-notifications`)
-  - react-native-restart (from `../node_modules/react-native-restart`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - "react-native-slider (from `../node_modules/@react-native-community/slider`)"
-  - react-native-view-shot (from `../node_modules/react-native-view-shot`)
   - react-native-webview (from `../node_modules/react-native-webview`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -625,15 +576,13 @@ DEPENDENCIES:
   - React-runtimescheduler (from `../node_modules/react-native/ReactCommon/react/renderer/runtimescheduler`)
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - rn-fetch-blob (from `../node_modules/rn-fetch-blob`)
+  - "ReactNativeAudioToolkit (from `../node_modules/@react-native-community/audio-toolkit`)"
   - RNAudioRecorderPlayer (from `../node_modules/react-native-audio-recorder-player`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - "RNCClipboard (from `../node_modules/@react-native-clipboard/clipboard`)"
   - "RNCMaskedView (from `../node_modules/@react-native-masked-view/masked-view`)"
-  - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNFastImage (from `../node_modules/react-native-fast-image`)
-  - "RNFlashList (from `../node_modules/@shopify/flash-list`)"
   - RNFS (from `../node_modules/react-native-fs`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNGoogleMobileAds (from `../node_modules/react-native-google-mobile-ads`)
@@ -645,16 +594,13 @@ DEPENDENCIES:
   - RNShare (from `../node_modules/react-native-share`)
   - RNStoreReview (from `../node_modules/react-native-store-review`)
   - RNSVG (from `../node_modules/react-native-svg`)
-  - TextToSpeech (from `../node_modules/react-native-tts`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
-    - Base64
     - fmt
     - Google-Mobile-Ads-SDK
     - GoogleUserMessagingPlatform
-    - JWT
     - libevent
     - libwebp
     - MMKV
@@ -664,15 +610,12 @@ SPEC REPOS:
     - SDWebImage
     - SDWebImageWebPCoder
     - SocketRocket
-    - SSZipArchive
 
 EXTERNAL SOURCES:
   boost:
     :podspec: "../node_modules/react-native/third-party-podspecs/boost.podspec"
   BVLinearGradient:
     :path: "../node_modules/react-native-linear-gradient"
-  CodePush:
-    :path: "../node_modules/react-native-code-push"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   FBLazyVector:
@@ -719,32 +662,14 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   react-native-blur:
     :path: "../node_modules/@react-native-community/blur"
-  react-native-cameraroll:
-    :path: "../node_modules/@react-native-camera-roll/camera-roll"
-  react-native-config:
-    :path: "../node_modules/react-native-config"
   react-native-contacts:
     :path: "../node_modules/react-native-contacts"
-  react-native-date-picker:
-    :path: "../node_modules/react-native-date-picker"
-  react-native-document-picker:
-    :path: "../node_modules/react-native-document-picker"
-  react-native-image-picker:
-    :path: "../node_modules/react-native-image-picker"
-  react-native-linear-gradient-text:
-    :path: "../node_modules/react-native-linear-gradient-text"
   react-native-mmkv:
     :path: "../node_modules/react-native-mmkv"
-  react-native-notifications:
-    :path: "../node_modules/react-native-notifications"
-  react-native-restart:
-    :path: "../node_modules/react-native-restart"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-slider:
     :path: "../node_modules/@react-native-community/slider"
-  react-native-view-shot:
-    :path: "../node_modules/react-native-view-shot"
   react-native-webview:
     :path: "../node_modules/react-native-webview"
   React-NativeModulesApple:
@@ -781,8 +706,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/react/utils"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
-  rn-fetch-blob:
-    :path: "../node_modules/rn-fetch-blob"
+  ReactNativeAudioToolkit:
+    :path: "../node_modules/@react-native-community/audio-toolkit"
   RNAudioRecorderPlayer:
     :path: "../node_modules/react-native-audio-recorder-player"
   RNCAsyncStorage:
@@ -791,14 +716,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-clipboard/clipboard"
   RNCMaskedView:
     :path: "../node_modules/@react-native-masked-view/masked-view"
-  RNCPicker:
-    :path: "../node_modules/@react-native-picker/picker"
   RNDeviceInfo:
     :path: "../node_modules/react-native-device-info"
   RNFastImage:
     :path: "../node_modules/react-native-fast-image"
-  RNFlashList:
-    :path: "../node_modules/@shopify/flash-list"
   RNFS:
     :path: "../node_modules/react-native-fs"
   RNGestureHandler:
@@ -821,16 +742,12 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-store-review"
   RNSVG:
     :path: "../node_modules/react-native-svg"
-  TextToSpeech:
-    :path: "../node_modules/react-native-tts"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
   boost: 7dcd2de282d72e344012f7d6564d024930a6a440
   BVLinearGradient: cb006ba232a1f3e4f341bb62c42d1098c284da70
-  CodePush: 8ba8ea6dbaf817d5e51dbbbd622e15150ba814dd
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   FBLazyVector: dc178b8748748c036ef9493a5d59d6d1f91a36ce
   FBReactNativeSpec: d0aaae78e93c89dc2d691d8052a4d2aeb1b461ee
@@ -839,7 +756,6 @@ SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 7db2098033ad3bfcd72a11e7503b49700a93029e
   GoogleUserMessagingPlatform: f131fa7978d2ba88d7426702b057c2cc318e6595
   hermes-engine: 9b9bb14184a11b8ceb4131b09abf634880f0f46d
-  JWT: ef71dfb03e1f842081e64dc42eef0e164f35d251
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
   lottie-ios: 016449b5d8be0c3dcbcfa0a9988469999cd04c5d
@@ -863,19 +779,10 @@ SPEC CHECKSUMS:
   React-jsinspector: 54205b269da20c51417e0fc02c4cde9f29a4bf1a
   React-logger: 81785c91d2fcc517657ff456c106c6d8e9ec4110
   react-native-blur: 1d87a4b8feafb857d78a918e3b069e5b68d9d6e4
-  react-native-cameraroll: 9c9027acae394d1248b7255bbc1cd8fbddd7ba8f
-  react-native-config: d08b60865268872495a43e211059b4606131fe01
   react-native-contacts: f551920b74ebfc5f7f6df307495f085e504a4369
-  react-native-date-picker: 5ddb34db03afc527bc07777952c2ac72fa384411
-  react-native-document-picker: f44fee3ea76683f6e79464b39e631a15263c35db
-  react-native-image-picker: 6663b87a9ebdbbe064dc45a9ce5c0a00e751b594
-  react-native-linear-gradient-text: a6ef1b4c74425c589fa5307c5e2ce313b2eb7364
   react-native-mmkv: 7cec21d9383a4261e8d732104dfddb18ec8cc71c
-  react-native-notifications: 5ec52fe4f3c3e096adcb255f7d810ea819cdd4bb
-  react-native-restart: 0bc732f4461709022a742bb29bcccf6bbc5b4863
   react-native-safe-area-context: 758e894ca5a9bd1868d2a9cfbca7326a2b6bf9dc
   react-native-slider: 128556a7e6762a69a31b4bb734a8b35f68f9f4e5
-  react-native-view-shot: d1a701eb0719c6dccbd20b4bb43b1069f304cb70
   react-native-webview: 02775e69e0c2dfaee95a38f1fcc59b0308fe44ae
   React-NativeModulesApple: 502d8ef6c6ce543f70d6b92f9ec33bfd88ac2852
   React-perflogger: cb433f318c6667060fc1f62e26eb58d6eb30a627
@@ -894,16 +801,14 @@ SPEC CHECKSUMS:
   React-runtimescheduler: d5970dfdf48862881c5ba2a41a52cea66e876294
   React-utils: b74047488a8efe1790b016bd50788b2b0bd4566c
   ReactCommon: 32f066dc0265a6c65312c276e47dd7ecf6a1a6d9
+  ReactNativeAudioToolkit: 1b4cddfc1cc4624c3db0a936d700fef298458f19
   RevenueCat: 7e1d0768fb287c9983173c9b28e39ccbeeb828a9
-  rn-fetch-blob: 25612b6d6f6e980c6f17ed98ba2f58f5696a51ca
   RNAudioRecorderPlayer: b5ed41ccfe72a211a870bfe09ab36c046eb27d2a
   RNCAsyncStorage: b6410dead2732b5c72a7fdb1ecb5651bbcf4674b
   RNCClipboard: f6679d470d0da2bce2a37b0af7b9e0bf369ecda5
   RNCMaskedView: 89ddbe318bbdb7433edaf61050531c850653afc2
-  RNCPicker: 7de564dce1f90b53e386a24001aafc3578233dfe
   RNDeviceInfo: 98bb51ba1519cd3f19f14e7236b5bb1c312c780f
   RNFastImage: 462a183c4b0b6b26fdfd639e1ed6ba37536c3b87
-  RNFlashList: ddbee9a08b4d03a0b0585adba5da09c932c15f38
   RNFS: 89de7d7f4c0f6bafa05343c578f61118c8282ed8
   RNGestureHandler: acf9b7ed3427d758c7790ab348dfe25b51179ad6
   RNGoogleMobileAds: ea033d6db4e436cb72a10755c4a7210f12443f9e
@@ -918,10 +823,8 @@ SPEC CHECKSUMS:
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageWebPCoder: 908b83b6adda48effe7667cd2b7f78c897e5111d
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
-  SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
-  TextToSpeech: 89b239221ec378d213af422d14789a729705360b
   Yoga: eddf2bbe4a896454c248a8f23b4355891eb720a6
 
-PODFILE CHECKSUM: ca66c88c6bb9bbb313853bfd1ef1de0ed607473a
+PODFILE CHECKSUM: b1c54aec032ddb475251c78e7d4a9e5ab548e982
 
 COCOAPODS: 1.16.2

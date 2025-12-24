@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   View,
   TouchableOpacity,
+  TouchableWithoutFeedback,
   StyleSheet,
   Modal,
   ScrollView,
@@ -86,8 +87,10 @@ const LanguagePicker = ({ onLanguageChange }) => {
         animationType="slide"
         onRequestClose={closeModal}
       >
-        <View style={styles.modalOverlay}>
-          <View style={styles.modalContainer}>
+        <TouchableWithoutFeedback onPress={closeModal}>
+          <View style={styles.modalOverlay}>
+            <TouchableWithoutFeedback onPress={() => {}}>
+              <View style={styles.modalContainer}>
             <SafeAreaView style={styles.modalContent} edges={['bottom']}>
               {/* Header - Instagram style */}
               <View style={styles.modalHeader}>
@@ -143,8 +146,10 @@ const LanguagePicker = ({ onLanguageChange }) => {
                 </View>
               )}
             </SafeAreaView>
+              </View>
+            </TouchableWithoutFeedback>
           </View>
-        </View>
+        </TouchableWithoutFeedback>
       </Modal>
     </>
   );

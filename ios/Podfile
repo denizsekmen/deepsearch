@@ -43,7 +43,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'CreateCrosshair' do
+target 'DeepSearch' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -76,7 +76,7 @@ target 'CreateCrosshair' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'CreateCrosshairTests' do
+  target 'DeepSearchTests' do
     inherit! :complete
     # Pods for testing
   end

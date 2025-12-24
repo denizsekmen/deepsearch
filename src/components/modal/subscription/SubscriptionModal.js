@@ -27,10 +27,16 @@ import { INSTAGRAM_COLORS } from "../../../theme/instagramColors";
 
 const { width: screenWidth, height: screenHeight } = Dimensions.get("window");
 
-export default function SubscriptionModal({ isOpen, setIsOpen, defaultPackage = null }) {
+export default function SubscriptionModal({
+  isOpen,
+  setIsOpen,
+  defaultPackage = "annual",
+}) {
   const { t } = useLanguage();
   const { alertConfig, showSuccess, hideAlert } = useCustomAlert();
-  const [selectedPackage, setSelectedPackage] = useState(defaultPackage || "weekly");
+  const [selectedPackage, setSelectedPackage] = useState(
+    defaultPackage || "annual"
+  );
   const { products, subscribe, restorePurchase } = useIAPContext();
   const [isProcessing, setIsProcessing] = useState(false);
   const [discount, setDiscount] = useState();
@@ -42,7 +48,6 @@ export default function SubscriptionModal({ isOpen, setIsOpen, defaultPackage = 
     { feature: t("unlimitedAccess") },
     { feature: t("unlimitedAnalysis") },
     { feature: t("batchOperations") },
-    { feature: t("noAds") },
   ];
 
   // Animation refs
@@ -75,29 +80,6 @@ export default function SubscriptionModal({ isOpen, setIsOpen, defaultPackage = 
     };
     pulse();
   }, []);
-
-  // Auto-trigger weekly purchase when modal opens
-  useEffect(() => {
-    if (isOpen) {
-      // Always select weekly plan
-      setSelectedPackage("weekly");
-      
-      // Auto-trigger purchase for weekly plan
-      // Small delay to ensure UI is ready and products are loaded
-      const timer = setTimeout(() => {
-        const packageIdentifier = products?.subscription?.weekly?.product?.identifier;
-        if (packageIdentifier) {
-          setIsProcessing(true);
-          subscribe(packageIdentifier, onSuccessfulPurchase, onPurchaseError);
-        } else {
-          console.warn("Weekly package identifier not available yet");
-          setIsProcessing(false);
-        }
-      }, 800);
-      return () => clearTimeout(timer);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isOpen, products]);
 
   // Main entrance animation
   useEffect(() => {
@@ -304,7 +286,11 @@ export default function SubscriptionModal({ isOpen, setIsOpen, defaultPackage = 
 
               {/* Background Gradient - Instagram style */}
               <LinearGradient
-                colors={[INSTAGRAM_COLORS.background, INSTAGRAM_COLORS.surface, INSTAGRAM_COLORS.surfaceElevated]}
+                colors={[
+                  INSTAGRAM_COLORS.background,
+                  INSTAGRAM_COLORS.surface,
+                  INSTAGRAM_COLORS.surfaceElevated,
+                ]}
                 locations={[0, 0.5, 1]}
                 style={styles.heroGradient}
               />
@@ -320,7 +306,11 @@ export default function SubscriptionModal({ isOpen, setIsOpen, defaultPackage = 
                 ]}
               >
                 <View style={styles.badgeContainer}>
-                  <Typography color={INSTAGRAM_COLORS.textPrimary} size={12} weight="700">
+                  <Typography
+                    color={INSTAGRAM_COLORS.textPrimary}
+                    size={12}
+                    weight="700"
+                  >
                     {t("premium").toUpperCase()}
                   </Typography>
                 </View>
@@ -389,10 +379,18 @@ export default function SubscriptionModal({ isOpen, setIsOpen, defaultPackage = 
                   >
                     <View style={styles.planContent}>
                       <View style={styles.planInfo}>
-                        <Typography size={18} weight="600" color={INSTAGRAM_COLORS.textPrimary}>
+                        <Typography
+                          size={18}
+                          weight="600"
+                          color={INSTAGRAM_COLORS.textPrimary}
+                        >
                           {t("weeklyAccess")}
                         </Typography>
-                        <Typography size={14} weight="500" color={INSTAGRAM_COLORS.textSecondary}>
+                        <Typography
+                          size={14}
+                          weight="500"
+                          color={INSTAGRAM_COLORS.textSecondary}
+                        >
                           {getValueFromSubscription("weekly", "priceString")}
                           {t("perWeek")}
                         </Typography>
@@ -434,14 +432,26 @@ export default function SubscriptionModal({ isOpen, setIsOpen, defaultPackage = 
 
                     <View style={styles.planContent}>
                       <View style={styles.planInfo}>
-                        <Typography size={18} weight="600" color={INSTAGRAM_COLORS.textPrimary}>
+                        <Typography
+                          size={18}
+                          weight="600"
+                          color={INSTAGRAM_COLORS.textPrimary}
+                        >
                           {t("annualPlan")}
                         </Typography>
-                        <Typography size={14} weight="500" color={INSTAGRAM_COLORS.textSecondary}>
+                        <Typography
+                          size={14}
+                          weight="500"
+                          color={INSTAGRAM_COLORS.textSecondary}
+                        >
                           {getValueFromSubscription("annual", "priceString")}
                           {t("perYear")}
                         </Typography>
-                        <Typography size={12} weight="500" color={INSTAGRAM_COLORS.textLink}>
+                        <Typography
+                          size={12}
+                          weight="500"
+                          color={INSTAGRAM_COLORS.textLink}
+                        >
                           {t("bestValue")}
                         </Typography>
                       </View>
@@ -461,22 +471,40 @@ export default function SubscriptionModal({ isOpen, setIsOpen, defaultPackage = 
                 </TouchableOpacity>
               </View>
 
-              {/* Continue Button - Instagram style */}
+              {/* Continue Button - Colorful gradient for conversion */}
               <TouchableOpacity
                 onPress={onSubmit}
+                activeOpacity={0.9}
                 style={styles.continueButton}
-                activeOpacity={0.8}
               >
-                <View style={styles.buttonContainer}>
-                  <Typography color={INSTAGRAM_COLORS.textPrimary} size={16} weight="600">
-                    {t("getPremium")}
-                  </Typography>
-                  <SvgAsset
-                    name="angle_right"
-                    color={INSTAGRAM_COLORS.textPrimary}
-                    style={styles.buttonIcon}
-                  />
-                </View>
+                <LinearGradient
+                  colors={[
+                    "#405DE6",
+                    "#5851DB",
+                    "#833AB4",
+                    "#C13584",
+                    "#E1306C",
+                    "#FD1D1D",
+                  ]}
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                  style={styles.buttonGradient}
+                >
+                  <View style={styles.buttonContainer}>
+                    <Typography
+                      color={INSTAGRAM_COLORS.textPrimary}
+                      size={16}
+                      weight="700"
+                    >
+                      {t("getPremium")}
+                    </Typography>
+                    <SvgAsset
+                      name="angle_right"
+                      color={INSTAGRAM_COLORS.textPrimary}
+                      style={styles.buttonIcon}
+                    />
+                  </View>
+                </LinearGradient>
               </TouchableOpacity>
 
               {/* Features Section */}
@@ -511,7 +539,11 @@ export default function SubscriptionModal({ isOpen, setIsOpen, defaultPackage = 
                           style={styles.featureIcon}
                         />
                       </View>
-                      <Typography color={INSTAGRAM_COLORS.textPrimary} size={15} weight="400">
+                      <Typography
+                        color={INSTAGRAM_COLORS.textPrimary}
+                        size={15}
+                        weight="400"
+                      >
                         {feature.feature}
                       </Typography>
                     </Animated.View>
@@ -534,7 +566,11 @@ export default function SubscriptionModal({ isOpen, setIsOpen, defaultPackage = 
                   {BOTTOM_ITEMS.map((item, index) => (
                     <View style={styles.footerLinkContainer} key={index}>
                       <TouchableOpacity onPress={item.onPress}>
-                        <Typography size={12} color={INSTAGRAM_COLORS.textLink} weight="500">
+                        <Typography
+                          size={12}
+                          color={INSTAGRAM_COLORS.textLink}
+                          weight="500"
+                        >
                           {item.title}
                         </Typography>
                       </TouchableOpacity>
@@ -789,8 +825,20 @@ const styles = StyleSheet.create({
   },
   continueButton: {
     marginBottom: toHeight(24),
-    borderRadius: toWidth(8),
+    borderRadius: toWidth(12),
     overflow: "hidden",
+    shadowColor: "#E1306C",
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.4,
+    shadowRadius: 10,
+    elevation: 10,
+  },
+  buttonGradient: {
+    borderRadius: toWidth(12),
+    width: "100%",
   },
   buttonContainer: {
     flexDirection: "row",
@@ -799,10 +847,6 @@ const styles = StyleSheet.create({
     paddingVertical: toHeight(16),
     paddingHorizontal: toWidth(32),
     gap: toWidth(8),
-    backgroundColor: INSTAGRAM_COLORS.surface,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: INSTAGRAM_COLORS.border,
-    borderRadius: toWidth(8),
   },
   buttonIcon: {
     width: toWidth(20),
