@@ -1,9 +1,4 @@
-import {
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native";
+import { View, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import * as StoreReview from "react-native-store-review";
@@ -47,7 +42,7 @@ const Settings = () => {
     const totalTried = async () => {
       try {
         if (!mounted) return;
-        
+
         // Timeout ekle - eğer 1 saniyeden uzun sürerse iptal et
         timeoutId = setTimeout(() => {
           if (mounted) {
@@ -87,9 +82,9 @@ const Settings = () => {
   }, []);
 
   const termsAndConditionsUrl =
-    "https://deepsearchai.app/terms";
+    "https://bernsoftware.com/deepsearch-people-finder-ai-terms-of-use/";
   const privacyPolicyUrl =
-    "https://deepsearchai.app/privacy";
+    "https://bernsoftware.com/deepsearch-people-finder-ai-privacy-policy/";
 
   const MENU_ITEMS = useMemo(
     () => [
@@ -99,10 +94,7 @@ const Settings = () => {
         icon: "languageIcon",
         iconColor: "#1DB954",
         backgroundColor: "rgba(29, 185, 84, 0.15)",
-        gradientColors: [
-          "rgba(29, 185, 84, 0.2)",
-          "rgba(29, 185, 84, 0.05)",
-        ],
+        gradientColors: ["rgba(29, 185, 84, 0.2)", "rgba(29, 185, 84, 0.05)"],
         description: t("language"),
         isChevronVisible: false,
         isCustomComponent: true,
@@ -199,7 +191,7 @@ const Settings = () => {
     <View style={styles.container}>
       <View style={styles.backgroundGradient} />
 
-      <SafeAreaView edges={['top']}>
+      <SafeAreaView edges={["top"]}>
         <ScrollView
           contentContainerStyle={{ paddingBottom: toHeight(190) }}
           style={styles.scrollView}
@@ -229,7 +221,11 @@ const Settings = () => {
                 <View style={styles.premiumCardInner}>
                   <View style={styles.premiumContent}>
                     <View style={styles.premiumTextContainer}>
-                      <Typography weight="700" size={16} color={INSTAGRAM_COLORS.textPrimary}>
+                      <Typography
+                        weight="700"
+                        size={16}
+                        color={INSTAGRAM_COLORS.textPrimary}
+                      >
                         {t("upgradeToPremium")}
                       </Typography>
                       <Typography
@@ -238,7 +234,7 @@ const Settings = () => {
                         color={INSTAGRAM_COLORS.textSecondary}
                         style={styles.premiumSubtext}
                       >
-                        {t('unlimitedSearchesDescription')}
+                        {t("unlimitedSearchesDescription")}
                       </Typography>
                     </View>
                     <SvgAsset
@@ -258,12 +254,20 @@ const Settings = () => {
               <View style={styles.premiumStatusCard}>
                 <View style={styles.premiumStatusContent}>
                   <View style={styles.premiumStatusIcon}>
-                    <Typography size={20} weight="700" color={INSTAGRAM_COLORS.premium}>
+                    <Typography
+                      size={20}
+                      weight="700"
+                      color={INSTAGRAM_COLORS.premium}
+                    >
                       ✓
                     </Typography>
                   </View>
                   <View style={styles.premiumStatusTextContainer}>
-                    <Typography weight="700" size={15} color={INSTAGRAM_COLORS.textPrimary}>
+                    <Typography
+                      weight="700"
+                      size={15}
+                      color={INSTAGRAM_COLORS.textPrimary}
+                    >
                       {t("premiumActive")}
                     </Typography>
                     <Typography
@@ -271,7 +275,7 @@ const Settings = () => {
                       size={12}
                       color={INSTAGRAM_COLORS.textSecondary}
                     >
-                      {t('unlimitedAccess')}
+                      {t("unlimitedAccess")}
                     </Typography>
                   </View>
                 </View>
@@ -303,7 +307,11 @@ const Settings = () => {
                           />
                         </View>
                         <View style={styles.itemTextContainer}>
-                          <Typography size={14} color={INSTAGRAM_COLORS.textPrimary} weight="400">
+                          <Typography
+                            size={14}
+                            color={INSTAGRAM_COLORS.textPrimary}
+                            weight="400"
+                          >
                             {item.name}
                           </Typography>
                         </View>

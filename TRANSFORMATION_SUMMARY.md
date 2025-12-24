@@ -64,8 +64,8 @@ The app has been successfully transformed from a crosshair designer app to **Dee
 - ✅ Ready for server-driven data later
 
 #### LegalScreen (`src/screens/search/LegalScreen.js`)
-- ✅ Privacy Policy button → `https://deepsearchai.app/privacy`
-- ✅ Terms of Service button → `https://deepsearchai.app/terms`
+- ✅ Privacy Policy button → `https://bernsoftware.com/deepsearch-people-finder-ai-privacy-policy/`
+- ✅ Terms of Service button → `https://bernsoftware.com/deepsearch-people-finder-ai-terms-of-use/`
 - ✅ WebView modal integration
 - ✅ Privacy disclaimer
 
@@ -176,8 +176,8 @@ See `src/services/README_PEOPLE_SEARCH.md` for detailed instructions.
 - `FREE_SOURCES_PER_SEARCH = 2`
 
 ### Legal URLs (in `src/screens/search/LegalScreen.js`)
-- Privacy Policy: `https://deepsearchai.app/privacy`
-- Terms of Service: `https://deepsearchai.app/terms`
+- Privacy Policy: `https://bernsoftware.com/deepsearch-people-finder-ai-privacy-policy/`
+- Terms of Service: `https://bernsoftware.com/deepsearch-people-finder-ai-terms-of-use/`
 
 ## 🧪 Testing Checklist
 

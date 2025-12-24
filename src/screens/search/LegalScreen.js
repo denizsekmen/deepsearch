@@ -13,8 +13,8 @@ import { toWidth, toHeight } from '../../theme/helpers';
 import { useLanguage } from '../../context/LanguageContext';
 import WebViewModal from '../../components/modal/WebViewModal';
 
-const PRIVACY_POLICY_URL = 'https://deepsearchai.app/privacy';
-const TERMS_URL = 'https://deepsearchai.app/terms';
+const PRIVACY_POLICY_URL = 'https://bernsoftware.com/deepsearch-people-finder-ai-privacy-policy/';
+const TERMS_URL = 'https://bernsoftware.com/deepsearch-people-finder-ai-terms-of-use/';
 
 export default function LegalScreen() {
   const navigation = useNavigation();

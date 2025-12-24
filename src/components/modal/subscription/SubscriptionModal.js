@@ -209,7 +209,7 @@ export default function SubscriptionModal({
       title: t("terms"),
       onPress: () => {
         setWebViewSource(
-          "https://bernsoftware.com/ai-crosshair-generator-terms-of-use/"
+          "https://bernsoftware.com/deepsearch-people-finder-ai-terms-of-use/"
         ),
           setIsWebViewVisible(!isWebViewVisible);
       },
@@ -218,7 +218,7 @@ export default function SubscriptionModal({
       title: t("privacyPolicy"),
       onPress: () => {
         setWebViewSource(
-          "https://bernsoftware.com/ai-crosshair-generator-privacy-policy/"
+          "https://bernsoftware.com/deepsearch-people-finder-ai-privacy-policy/"
         ),
           setIsWebViewVisible(!isWebViewVisible);
       },
