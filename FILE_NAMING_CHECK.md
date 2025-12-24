@@ -72,3 +72,6 @@ Tüm dosya isimleri React Native standartlarına uygun:
 
 
 
+
+
+

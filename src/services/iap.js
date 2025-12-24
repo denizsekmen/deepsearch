@@ -4,12 +4,12 @@ import Purchases from "react-native-purchases";
 export const initPurchases = async (id) => {
   if (Platform.OS === "ios") {
     await Purchases.configure({
-      apiKey: "appl_zCwxSRoWFVCVsqZsdLARTUrifyH",
+      apiKey: "appl_HLcLUvjEsNohEHRqXDGMYMeqrCl",
       appUserID: id,
     });
   } else if (Platform.OS === "android") {
     await Purchases.configure({
-      apiKey: "appl_zCwxSRoWFVCVsqZsdLARTUrifyH",
+      apiKey: "appl_HLcLUvjEsNohEHRqXDGMYMeqrCl",
       appUserID: id,
     });
   }

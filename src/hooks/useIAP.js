@@ -14,12 +14,13 @@ const useIAP = (isPremium, setIsPremium) => {
         onSuccess();
       } else {
         alert(LanguageService.t("errorOccurred"));
-        onError();
+        onError({ userCancelled: false });
       }
     } catch (e) {
       if (!e?.userCancelled) {
         alert(LanguageService.t("errorOccurred"));
       }
+      // Her durumda error'ı geçir (userCancelled bilgisi ile)
       onError(e);
     }
   };

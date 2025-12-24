@@ -184,6 +184,14 @@ export default function SubscriptionModal({ isOpen, setIsOpen, defaultPackage = 
 
   const onPurchaseError = (err) => {
     setIsProcessing(false);
+    // Kullanıcı cancel ettiyse modal'ı kapatma, açık kalsın
+    // Sadece gerçek hatalarda kapat (userCancelled false ise veya hata varsa)
+    if (err && err.userCancelled) {
+      // Kullanıcı cancel etti, modal açık kalsın
+      console.log("Purchase cancelled by user");
+      return;
+    }
+    // Gerçek bir hata var veya err undefined/null, modal'ı kapat
     setIsOpen(false);
     console.error(err);
   };
